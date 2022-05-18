@@ -3,9 +3,10 @@ const size = document.getElementById('size')
 
 window.addEventListener('load', function() {
     generateSquares();
-  });
+});
 
 function generateSquares(size) {
+    container.replaceChildren();
     container.setAttribute('style', `grid-template-columns: repeat(${size}, 1fr);`)
     for (i = 1; i <= size; i++) {
         for (j = 1; j <= size; j++) {
